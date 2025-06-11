@@ -31,7 +31,7 @@ function createItem(item) {
   	clone.remove();
   	const items = getTasksFromDOM();
   	saveTasks(items);
-  })
+  });
 
   duplicateButton.addEventListener("click", () => {
     const itemName = textElement.textContent;
