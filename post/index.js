@@ -34,10 +34,11 @@ function createItem(item) {
   })
 
   duplicateButton.addEventListener("click", () => {
-  	const newItem = createItem(item);
-  	listElement.prepend(newItem);
-  	const items = getTasksFromDOM();
-  	saveTasks(items);
+    const itemName = textElement.textContent;
+    const newItem = createItem(itemName);
+    listElement.prepend(newItem);
+    const items = getTasksFromDOM();
+    saveTasks(items);
   });
 
 	editButton.addEventListener("click", () => {
